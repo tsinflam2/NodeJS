@@ -1,0 +1,105 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io('http://localhost:8080/');
+    // var socket = io('http://dearfuture.cloudapp.net:80/');
+
+    // socket.emit('new message',
+    // {messageType: 'text',
+    // sendFrom:'user@gmail.com',
+    // sendTo:'abc@gmail.com',
+    // senderUsername:'abc',
+    // receiverUsername:'user',
+    // sendDateTime: new Date().toISOString(),
+    // canOpenDateTime:new Date().toISOString(),
+    // isLocked : true,
+    // content:'Hello, I am userB testing the time difference hahahahaha'});
+    //
+    //
+    // console.log(new Date().getTimezoneOffset());
+    // socket.emit('new memory',
+    // {_creator: '58341a9274eaa3b5795c6af4',
+    // postDateTime:'2016-12-01 12:36:00',
+    // message:'5835729d6946f38c74636813',
+    // memoryStatus: 'This is ory'
+    // });
+    //
+    // socket.on('new memory', function (data) {
+    //     console.log("From send_message.html: new memory :" + JSON.stringify(data));
+    // });
+
+    // socket.emit('get newsfeed', {
+    //     _id: '58341acc74eaa3b5795c6af5'
+    // });
+
+
+    // socket.emit('get memories', {
+    //     _id: '58341a9274eaa3b5795c6af4'
+    // });
+
+    socket.emit('get album', {
+        _id: '58341a9274eaa3b5795c6af4'
+    });
+    //
+    socket.on('get album', function(data) {
+        console.log("From send_message.html: new memory :" + JSON.stringify(data));
+    });
+
+
+    // socket.on('get newsfeed', function(data) {
+    //     console.log("From send_message.html: get newsfeed :" + JSON.stringify(data));
+    // });
+
+    // socket.on('get memories', function(data) {
+    //     console.log("From send_message.html: get memories :" + JSON.stringify(data));
+    // });
+
+    // socket.emit('inbox locked', { email: 'abc@gmail.com' });
+    // socket.emit('inbox unlocked', { email: 'abc@gmail.com' });
+    // socket.emit('inbox locked', { email: 'userB' });
+    // socket.emit('outbox unlocked', { email: 'ken@live.hk' });
+    // socket.emit('delete message', { _id:'58356e3273ea4588b8ebbaab', deleteFrom: 'outbox' });
+    // socket.emit('token refresh', { _id:'5832be3b072affaa0b935c18', token:'a' });
+    // socket.emit('find user by email', "zoe@gmail.com");
+    // socket.emit('add friend', 'zoe@gmail.com', 'man@gmail.com');
+    // socket.on('inbox locked', function (data) {
+    //   // console.log("Entered send_message inbox");
+    //   console.log("From send_message.html: inbox locked (edited23):" + JSON.stringify(data));
+    // });
+
+    // socket.emit('friend list request', { username: 'userA' });
+    // socket.on('friend list request', function (data) {
+    //   // console.log("Entered send_message inbox");
+    //   console.log("From send_message.html: friend list request" + JSON.stringify(data));
+    // });
+
+    // socket.on('outbox unlocked', function (data) {
+    //   // console.log("Entered send_message inbox");
+    //   console.log("From send_message.html: outbox unlocked:" + JSON.stringify(data));
+    // });
+
+    // socket.on('inbox locked', function (data) {
+    //   // console.log("Entered send_message inbox");
+    //   console.log("From send_message.html: inbox locked:" + JSON.stringify(data));
+    //   console.log(new Date());
+    // });
+
+    // socket.on('inbox unlocked', function (data) {
+    //   // console.log("Entered send_message inbox");
+    //   console.log("From send_message.html: inbox unlocked:" + JSON.stringify(data));
+    // });
+    //
+    // socket.on('delete message', function (data) {
+    //   // console.log("Entered send_message inbox");
+    //   console.log("From send_message.html: delete message:" + JSON.stringify(data));
+    // });
+    //
+    // socket.on('find user by email', function (data) {
+    //   // console.log("Entered send_message inbox");
+    //   console.log("From send_message.html: find user by email:" + JSON.stringify(data));
+    //
+    // });
+
+    // socket.on('add friend', function(response) {
+    //   console.log(response);
+    // });
+</script>

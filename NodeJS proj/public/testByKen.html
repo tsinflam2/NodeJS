@@ -1,0 +1,111 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  // var socket = io('http://dearfuture.eastasia.cloudapp.azure.com:8080');
+  var socket = io('http://localhost:8080/');
+
+  //Ken id : 583d419d30785c383db5ada8
+  //Ben id : 583d419d30785c383db5ada9
+  //Cen id : 583d419d30785c383db5adaa
+//   //Den id : 583d419d30785c383db5adab
+// socket.emit('like on memory', { Memoryid : '586b81d59fd0d99e8d34ba45', sender_id : '586b81d59fd0d99e8d34ba45'});
+//
+// socket.emit('find relevant user by email' , {
+//   sender_id : '586c93b3d8698dd901c63779',
+//   key : 'live'
+// });
+
+  //vivian follow ken
+  // socket.emit('follow request' , {sender_id : '584508bfc8203cad1cc3212a' , target_id: '583575d76946f38c7463681a' , isPublic : 'false'} );
+  //socket.emit('unfollow' , {sender_id : '584508bfc8203cad1cc3212a' , target_id: '583575d76946f38c7463681a'});
+
+  // socket.emit('new memory', {
+  //     _creator : '5886c1545310fc1a1c7c73fc' ,
+  //     postDateTime : '2016-12-20T03:30:00.000Z',
+  //     message : '5886cced46d58a1c505713a1' ,
+  //     memoryStatus: 'so fuck that little bitch'
+  //    } );
+
+  socket.emit('find nearby', {     longitude: 114.17356640624993,
+    latitude: 22.336522499999994} );
+  // socket.emit('get request list number', { target_id : '586c9385d8698dd901c63778'});
+
+    // socket.emit('get memories' , {_id : '586c93b3d8698dd901c63779' });
+
+  // socket.emit('get home page' , {sender_id : '586c9385d8698dd901c63778' });
+  //  socket.emit('get home page' , {sender_id : '58341a9274eaa3b5795c6af4' , cutoffTime : '2016-12-29T10:25:47.784Z'} );
+
+
+
+  // socket.emit('like on memory', { Memoryid :'58647d6a498f1103825da039' , sender_id :'583d419d30785c383db5adaa' });
+  // socket.emit('like on memory', { Memoryid :'58647d6a498f1103825da039' , sender_id :'583d419d30785c383db5adab' });
+  //socket.emit('unlike on memory', { Memoryid :'58647d6a498f1103825da039' , sender_id :'583d419d30785c383db5adaa' });
+
+  // socket.emit('get like list', { Memoryid :'58647d6a498f1103825da039',  sender_id :'583d419d30785c383db5adaa' });
+
+  // socket.emit('new message' , {
+  //   messageType : 'text',
+  //   sendDateTime : '2016-12-20T03:30:00.000Z',
+  //   canOpenDateTime: '2016-12-20T03:30:00.000Z',
+  //   sendTo : '586c9385d8698dd901c63778',
+  //   sendFrom : '586c93b3d8698dd901c63779',
+  //   senderUsername : 'ben',
+  //   receiverUsername : 'ken',
+  //   isLocked : false,
+  //   content : 'hello'
+  //
+  // });
+
+  // socket.emit('message open', {
+  //   message_id : '587458dd5f1eb8777bf60a94'
+  // });
+  //
+  // socket.emit('inbox unlocked', { _id : '58ae8b3fe8299e1dcc356b9e'});
+
+  // socket.emit('inbox unlocked', {_id:'5874881b477e88a10af874d7'});
+  //
+  // socket.emit('outbox locked', {_id :'5874881b477e88a10af874d7'});
+  //
+  // socket.emit('outbox unlocked', {_id:'5874881b477e88a10af874d7'});
+
+  // socket.emit('create SQ', { question : 'How are you bitch?', answer: 'I am fine fuck you', user_id:'587487702d3eeda0b0701ada'});
+  //
+  // socket.emit('get SQ', {user_email : 'ken@live.hk'});
+
+  // socket.emit('renew pass', {email:'ken@live.hk', noOfQuestion: 0, newpass: '123', answer:'I am fine fuck you'});
+
+  // socket.emit('get user info by email',{'email' : 'ken@live.hk'})
+
+  // socket.emit('get like list', { Memoryid : '5875a8c461c0624303dbabfa', sender_id:'5874881b477e88a10af874d7'});
+
+  // socket.emit('get recipient list', {input:'', sender_id:'58774e44233c73518d92429e'});
+
+  // socket.emit('add bookmark', {sender_id : '58748852477e88a10af874d9', message_id :'58787faf46b35743dc1f5a65'});
+
+  // socket.emit('get bookmark', {sender_id : '58ae8b3fe8299e1dcc356b9e'} );
+
+  // socket.emit('outbox unlocked', {_id:'58748852477e88a10af874d9'})
+
+  // socket.emit('add comment', {creator:'5886c1545310fc1a1c7c73fc', content:'Hello World!', memory_id:'5886ee515f45c12521779300'});
+
+  // socket.emit('inbox unlocked', { _id : '5886c1545310fc1a1c7c73fc', cutOff: '2017-01-25T07:36:18.473Z'})
+
+  // socket.emit('get noti', {_id : '5886c1545310fc1a1c7c73fc', cutOff : '2017-02-03T10:33:39.164Z'});
+
+  // socket.emit('outbox unlocked', {_id : '5886fea1fbb2c8253b018767'});
+
+  // socket.emit('new message', { messageType: 'photo',
+  // sendDateTime: '2017-02-07 17:24:48',
+  // canOpenDateTime: '2017-02-07 17:26:16',
+  // sendTo: '5899912203eeb59341c836e3',
+  // sendFrom: '5899914003eeb59341c836e4',
+  // location: '5899916903eeb59341c836e5',
+  // content: 'hello',
+  // fileLink: '02e02734-01ea-40e1-b4b6-dd4afc7af16b-cb3f9769-55a9-43d9-bbdb-c080cb5346be.tmp' });
+
+  // socket.emit('outbox locked', {_id : '5899912203eeb59341c836e3'})
+  // socket.emit('get bookmark', {_id : '589c3095a6934a526969c6d6'})
+
+
+
+
+</script>
