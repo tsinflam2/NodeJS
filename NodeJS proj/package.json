@@ -17,7 +17,7 @@
     "json-parser": "1.1.5",
     "jsonwebtoken": "7.1.9",
     "mongoose": "4.9.5",
-    "morgan": "1.8.1",
+    "morgan": "1.9.1",
     "socket.io": "1.7.3"
   },
   "devDependencies": {
